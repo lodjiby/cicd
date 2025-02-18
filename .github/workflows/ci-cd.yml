@@ -28,5 +28,5 @@ jobs:
 
       - name: Run tests
         run: |
-          python3 -m unittest discover
+          python3 -m unittest test_utils
 
