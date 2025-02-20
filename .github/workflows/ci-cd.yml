@@ -24,9 +24,15 @@ jobs:
       - name: Install Dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install -r requirements.txt
+          python3 -m pip install flake8
+
+          # Static analysis with flask8
+      - name: Lint with Flask8
+        run: |
+          flake8 .
+
 
       - name: Run tests
         run: |
-          python3 -m unittest test_utils
+          python3 -m unittest discover
 
